@@ -3,7 +3,7 @@ title: "GitHub ActionsでTerraformを自動化する（Terraform Cloudを使わ�
 emoji: "🎬"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [terraform, githubactions]
-published: false
+published: true
 ---
 
 # これはなに？
