@@ -36,7 +36,7 @@ https://github.com/tanny-pm/terraform-github-actions
 
 # tfstate ファイルの保存先 を S3 に変更する
 
-ここからは、公式チュートリアルの内容から変更した箇所を説明していきます。
+ここからは、公式チュートリアルの内容から変更した箇所を説明します。
 
 公式のチュートリアルでは、`tfstate`ファイルを Terraform Cloud で管理しています。そのため、別の方法で`tfstate`ファイルを管理する必要があります。
 
@@ -105,9 +105,9 @@ provider "aws" {
 
 # AWS のクレデンシャル情報をセットアップする
 
-ここからは GitHub Actions の設定を修正していきます。修正した箇所だけ抜粋して紹介します。
+ここからは GitHub Actions の設定を修正します。修正した箇所だけ抜粋して紹介します。
 
-まずは AWS のクレデンシャル情報を追記します。[公式のチュートリアル](https://developer.hashicorp.com/terraform/tutorials/automation/github-actions#set-up-terraform-cloud)では Terraform Cloud の環境変数に AWS の ID とアクセスキーを記載しています。今回はこれを GitHub Actions の YML ファイルに記載...しようと思ったのですが、OIDC を利用した認証の方がよりセキュアということなので、その方法を採用しました。
+まずは AWS のクレデンシャル情報を追記します。[公式のチュートリアル](https://developer.hashicorp.com/terraform/tutorials/automation/github-actions#set-up-terraform-cloud)では Terraform Cloud の環境変数に AWS の ID とアクセスキーを記載しています。今回はこれを GitHub Actions の YML ファイルに記載しようと思ったのですが、OIDC を利用した認証の方がよりセキュアということなので、その方法を採用しました。
 
 具体的な方法は、以下の記事をそのまま参考にさせていただきました。
 https://zenn.dev/kou_pg_0131/articles/gh-actions-oidc-aws
@@ -181,7 +181,7 @@ https://sadayoshi-tada.hatenablog.com/entry/2022/04/09/115740
 
 ここまでの設定により、Pull Request と Merge の実行時に指定したアクションが実行されるようになります。
 
-[公式チュートリアル](https://developer.hashicorp.com/terraform/tutorials/automation/github-actions#review-and-merge-pull-request)の実行結果と同じ結果となるため、具体的な結果はそちらを参考にしてください。
+[公式チュートリアル](https://developer.hashicorp.com/terraform/tutorials/automation/github-actions#review-and-merge-pull-request)の実行結果と同じ結果になるため、具体的な結果はそちらを参考にしてください。
 
 参考として、初回の`apply`実行の後に、`main.tf`ファイルの中身を変えずに再度 Merge した後の実行結果を紹介します。以下のように、S3 の`tfstate`ファイルを参照して、既存の構築内容と差分がないことを検知し、何も実行していません。
 
@@ -193,7 +193,7 @@ https://sadayoshi-tada.hatenablog.com/entry/2022/04/09/115740
 
 Terraform Cloud を利用するのは面倒だという思いから、今回は GitHub Actions のみで Terraform の実行を自動化する方法を試してみました。その結果、Terraform Cloud を利用する理由やメリットも理解することができました。
 
-今回は`tfstate`ファイルを保存するために S3 を利用し、AWS の OIDC 設定を GitHubActions 上に記載し直すことになりました。Terraform Cloud を利用すれば、このあたりの「Terraform の実行に必要な情報」の管理をおまかせすることができますね。GitHub Actions 側には Terraform コマンドの実行手順だけを書けば良いです。
+今回は`tfstate`ファイルを保存するために S3 を利用し、AWS の OIDC 設定を GitHubActions 上へ記載し直すことになりました。Terraform Cloud を利用すれば、このあたりの「Terraform の実行に必要な情報」の管理をおまかせできますね。GitHub Actions 側には Terraform コマンドの実行手順だけを書けば良いです。
 
 実務で利用する際にはこのあたりのメリデメを考慮して、利用するツールを選定することになりそうです。
 
