@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/tanny-pm/zenn-docs#readme",
   "dependencies": {
-    "zenn-cli": "^0.1.135"
+    "zenn-cli": "^0.1.137"
   },
   "devDependencies": {
     "prettier": "2.8.2",

@@ -1,0 +1,17 @@
+{
+  "name": "Zenn",
+  "image": "mcr.microsoft.com/devcontainers/typescript-node:0-18-bullseye",
+  "postCreateCommand": "npm install",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "negokaz.zenn-editor",
+        "esbenp.prettier-vscode",
+        "dbaeumer.vscode-eslint",
+        "yzhang.markdown-all-in-one",
+        "ICS.japanese-proofreading",
+        "kisstkondoros.vscode-gutter-preview"
+      ]
+    }
+  }
+}
