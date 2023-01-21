@@ -4,5 +4,6 @@
   "files.autoSave": "onFocusChange",
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
-  "editor.formatOnType": true
+  "editor.formatOnType": true,
+  "japanese-proofreading.textlint.外来語カタカナ表記": false
 }

@@ -1,7 +1,7 @@
 {
   "name": "Zenn",
   "image": "mcr.microsoft.com/devcontainers/javascript-node:0-18-bullseye",
-  "postCreateCommand": "npm install",
+  "postCreateCommand": "npm install", //追加
   "customizations": {
     "vscode": {
       "extensions": [
