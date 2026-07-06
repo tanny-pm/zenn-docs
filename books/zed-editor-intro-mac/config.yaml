@@ -1,0 +1,15 @@
+title: "Zed入門：AIと並走する次世代エディタのはじめかた"
+summary: "Rust製の高速エディタZedに、VS CodeなどのモダンエディタからMac環境で乗り換えるための入門書です。AIエージェントを中心とした開発の始め方から、エディタ機能・Git連携・拡張機能とカスタマイズまで、Zedらしい開発スタイルを一冊で身につけます。"
+topics: ["zed", "editor", "ai", "mac"]
+published: false
+price: 0
+chapters:
+  - why-zed
+  - getting-started
+  - ai-agent
+  - ai-editing
+  - editor-core
+  - language-tools
+  - git-workflow
+  - customize
+  - appendix
